@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine.Tilemaps;
 
-namespace UnityEngine
+namespace UnityEngine.Tilemaps
 {
 	[Serializable]
 	[CreateAssetMenu(fileName = "NewRuleTile", menuName = "Tiles and Brushes/RuleTile", order = 360)]
@@ -113,7 +112,7 @@ namespace UnityEngine
 				base.RefreshTile(location, tileMap);
 			}
 
-            m_TileScript.RefreshTile(location, tileMap);
+            m_TileScript?.RefreshTile(location, tileMap);
 		}
 
         public bool RuleMatches(TilingRule rule, Vector3Int position, ITilemap tilemap, ref Matrix4x4 transform)
@@ -173,6 +172,7 @@ namespace UnityEngine
 						Vector3Int rotated = GetRotatedPos(offset, angle);
 						int index = GetIndexOfOffset(rotated);
 						TileBase tile = tilemap.GetTile(position + offset);
+
 						if (rule.m_Neighbors[index] == TilingRule.Neighbor.This && tile != this || rule.m_Neighbors[index] == TilingRule.Neighbor.NotThis && tile == this)
 						{
 							return false;
@@ -196,7 +196,8 @@ namespace UnityEngine
 						Vector3Int mirrored = GetMirroredPos(offset, mirrorX, mirrorY);
 						int index = GetIndexOfOffset(mirrored);
 						TileBase tile = tilemap.GetTile(position + offset);
-						if (rule.m_Neighbors[index] == TilingRule.Neighbor.This && tile != this || rule.m_Neighbors[index] == TilingRule.Neighbor.NotThis && tile == this)
+
+						if ((rule.m_Neighbors[index] == TilingRule.Neighbor.This && tile != this) || (rule.m_Neighbors[index] == TilingRule.Neighbor.NotThis && tile == this))
 						{
 							return false;
 						}

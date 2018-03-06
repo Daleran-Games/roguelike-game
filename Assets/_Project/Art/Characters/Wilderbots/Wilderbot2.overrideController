@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Wilderbot2
+  m_Controller: {fileID: 9100000, guid: 9582c7fa3aecf354cba5922f0623fcac, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c653c9f1b0fcc994ba3b7c9d442c0290, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b3fa9061d6d5f834ab9e7196d2945af9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 941c0132ab4ba5f4594b7087f41cc4e5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6073e31d96c02334d8e0154901e801f1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5945f7ec2aac5ef4a920bdb52569fbc1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aac997657ea99cf468b1b5115f95567a, type: 2}

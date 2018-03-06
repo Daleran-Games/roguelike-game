@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RoguelikeTiles
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300014, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300000, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300002, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300004, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300006, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300034, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300032, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300030, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300028, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300026, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300024, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300056, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300022, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300058, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300020, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300044, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300046, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300040, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300038, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300042, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300070, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300036, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300052, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300068, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300054, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300048, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300072, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300050, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300062, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300060, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300066, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300064, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300016, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300018, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300008, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300010, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  - {fileID: 21300012, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - RoguelikeTiles_7
+  - RoguelikeTiles_0
+  - RoguelikeTiles_1
+  - RoguelikeTiles_2
+  - RoguelikeTiles_3
+  - RoguelikeTiles_17
+  - RoguelikeTiles_16
+  - RoguelikeTiles_15
+  - RoguelikeTiles_14
+  - RoguelikeTiles_13
+  - RoguelikeTiles_12
+  - RoguelikeTiles_28
+  - RoguelikeTiles_11
+  - RoguelikeTiles_29
+  - RoguelikeTiles_10
+  - RoguelikeTiles_22
+  - RoguelikeTiles_23
+  - RoguelikeTiles_20
+  - RoguelikeTiles_19
+  - RoguelikeTiles_21
+  - RoguelikeTiles_35
+  - RoguelikeTiles_18
+  - RoguelikeTiles_26
+  - RoguelikeTiles_34
+  - RoguelikeTiles_27
+  - RoguelikeTiles_24
+  - RoguelikeTiles_36
+  - RoguelikeTiles_25
+  - RoguelikeTiles_31
+  - RoguelikeTiles_30
+  - RoguelikeTiles_33
+  - RoguelikeTiles_32
+  - RoguelikeTiles_8
+  - RoguelikeTiles_9
+  - RoguelikeTiles_4
+  - RoguelikeTiles_5
+  - RoguelikeTiles_6
+  m_Tag: RoguelikeTiles
+  m_IsVariant: 0

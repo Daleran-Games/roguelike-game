@@ -7,12 +7,12 @@ namespace DaleranGames
 {
     public static class CollectionExtensions 
     {
-        public static int RandomIndex (this System.Array array)
+        public static int RandomArrayIndex (this System.Array array)
         {
             return Random.Int(0, array.Length-1);
         }
 
-        public static int RandomIndex(this System.Array array, int dimension)
+        public static int RandomArrayIndex(this System.Array array, int dimension)
         {
             return Random.Int(0, array.GetLength(dimension)-1);
         }

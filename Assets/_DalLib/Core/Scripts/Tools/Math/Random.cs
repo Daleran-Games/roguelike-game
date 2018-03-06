@@ -25,7 +25,7 @@ namespace DaleranGames
 
         public static bool Bool()
         {
-            lock(syncLock)
+            lock (syncLock)
             {
                 if (random.NextDouble() <= 0.5)
                 {
@@ -47,11 +47,11 @@ namespace DaleranGames
             }
         }
 
-        public static bool Bool (int thousandthsChance)
+        public static bool Bool(int thousandthsChance)
         {
             lock (syncLock)
             {
-                if (random.Next(0,1000) <= thousandthsChance)
+                if (random.Next(0, 1000) <= thousandthsChance)
                 {
                     return true;
                 }
@@ -83,6 +83,11 @@ namespace DaleranGames
             }
         }
 
+        public static int Int(Vector2Int minMax)
+        {
+            return Int(minMax.x, minMax.y);
+        }
+
         public static float Float()
         {
             lock (syncLock)
@@ -108,6 +113,12 @@ namespace DaleranGames
                 return (float)random.NextDouble() * (max - min) + min;
             }
         }
+
+        public static float Float(Vector2 minMax)
+        {
+            return Float(minMax.x, minMax.y);
+        }
+
 
         public static float Float01()
         {

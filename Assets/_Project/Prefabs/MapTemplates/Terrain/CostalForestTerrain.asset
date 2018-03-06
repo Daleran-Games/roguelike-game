@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a38f3afcba621e4db482049696585f3, type: 3}
+  m_Name: CostalForestTerrain
+  m_EditorClassIdentifier: 
+  MapWidth: {x: 96, y: 128}
+  MapHeight: {x: 96, y: 128}
+  NorthTile: {fileID: 11400000, guid: 23dfd24fc3de3be40abebb56db0d59b0, type: 2}
+  NorthSizeRange: {x: 4, y: 8}
+  SouthTile: {fileID: 11400000, guid: 4ab3706e0fd6a2e4eba22a7a2d91804c, type: 2}
+  SouthSizeRange: {x: 5, y: 9}
+  EastTile: {fileID: 11400000, guid: 92093025a310191488b785c67628a518, type: 2}
+  EastSizeRange: {x: 2, y: 10}
+  WestTile: {fileID: 11400000, guid: 92093025a310191488b785c67628a518, type: 2}
+  WestSizeRange: {x: 2, y: 10}
+  DirtTile: {fileID: 11400000, guid: 4ddb9448eebc0b04c97388ff2ba8d4c4, type: 2}
+  DirtDensity: 0.079
+  VegetationTiles:
+  - {fileID: 11400000, guid: 223703282a473274abe4a0dd55290093, type: 2}
+  - {fileID: 11400000, guid: 680f2872d5e2bff40af40bd98457d8ca, type: 2}
+  VegetationDensity: 0.11
+  WaterTile: {fileID: 11400000, guid: 4ab3706e0fd6a2e4eba22a7a2d91804c, type: 2}
+  NumberOfWaterFeatures: {x: 1, y: 3}
