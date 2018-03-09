@@ -43,7 +43,6 @@ namespace DaleranGames.PixelArt
         private void OnValidate()
         {
             unitsInPixels = 1 / pixelsPerUnit;
-            ScaleCamera();
         }
 
         protected virtual float CalculateOrthographicSize(float scale)

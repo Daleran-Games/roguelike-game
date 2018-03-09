@@ -10,7 +10,7 @@ namespace DaleranGames.TileEngine
     {
         public OutdoorTemplate Outdoor;
 
-        public override void GenerateMap(out DataGrid<TileBase> tiles, out DataGrid<GameObject> objects, Vector3Int origin)
+        public override void GenerateMap(out DataGrid<MapTile> tiles, out DataGrid<GameObject> objects, Vector3Int origin)
         {
             Outdoor.GenerateMap(out tiles, out objects, origin);
         }

@@ -5,12 +5,17 @@ using UnityEngine.Tilemaps;
 
 namespace DaleranGames.TileEngine
 {
-    [ExecuteInEditMode]
+
     public class Map : Singleton<Map>
     {
 
-        public Tilemap Terrain;
+        [Header("Map Generation")]
         public MapTemplate Template;
+
+        [Header("Map Layers")]
+        public DataGrid<CollisionType> Collision;
+        public Tilemap Terrain;
+        
 
         // Update is called once per frame
         void Awake()
@@ -22,19 +27,20 @@ namespace DaleranGames.TileEngine
         public void GenerateMap()
         {
             ClearMap();
-
             DataGrid<GameObject> objects;
-            DataGrid<TileBase> tiles;
+            DataGrid<MapTile> tiles;
             Template.GenerateMap(out tiles,out objects, Vector3Int.zero);
-
+            Collision = new DataGrid<CollisionType>(tiles.Bounds);
             Terrain.SetTiles(tiles.Positions, tiles.Values);
-
         }
 
         [ContextMenu("Clear Map")]
         public void ClearMap()
         {
-            Terrain.ClearAllTiles();
+            Terrain?.ClearAllTiles();
+            Collision?.Clear();
         }
+
+
     }
 }

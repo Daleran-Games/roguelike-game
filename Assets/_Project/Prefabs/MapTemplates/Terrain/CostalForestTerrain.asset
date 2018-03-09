@@ -13,19 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MapWidth: {x: 96, y: 128}
   MapHeight: {x: 96, y: 128}
-  NorthTile: {fileID: 11400000, guid: 23dfd24fc3de3be40abebb56db0d59b0, type: 2}
+  NorthTile: {fileID: 11400000, guid: cffd982e8c0eec04589585850d6acade, type: 2}
   NorthSizeRange: {x: 4, y: 8}
-  SouthTile: {fileID: 11400000, guid: 4ab3706e0fd6a2e4eba22a7a2d91804c, type: 2}
+  SouthTile: {fileID: 11400000, guid: 0d826dab1ab72134e8a1dd54a196ff44, type: 2}
   SouthSizeRange: {x: 5, y: 9}
-  EastTile: {fileID: 11400000, guid: 92093025a310191488b785c67628a518, type: 2}
+  EastTile: {fileID: 11400000, guid: 89b33419415872542a80f0de9282c66e, type: 2}
   EastSizeRange: {x: 2, y: 10}
-  WestTile: {fileID: 11400000, guid: 92093025a310191488b785c67628a518, type: 2}
+  WestTile: {fileID: 11400000, guid: 89b33419415872542a80f0de9282c66e, type: 2}
   WestSizeRange: {x: 2, y: 10}
-  DirtTile: {fileID: 11400000, guid: 4ddb9448eebc0b04c97388ff2ba8d4c4, type: 2}
+  DirtTile: {fileID: 11400000, guid: 5e4aa09e0a4accf47b03b494c81d364b, type: 2}
   DirtDensity: 0.079
   VegetationTiles:
-  - {fileID: 11400000, guid: 223703282a473274abe4a0dd55290093, type: 2}
-  - {fileID: 11400000, guid: 680f2872d5e2bff40af40bd98457d8ca, type: 2}
+  - {fileID: 11400000, guid: 6f792ef93510ebf4e8dc6d63efeab082, type: 2}
+  - {fileID: 11400000, guid: b148c3ec5d99d9f40a87c9e3f6928693, type: 2}
+  - {fileID: 11400000, guid: 89b33419415872542a80f0de9282c66e, type: 2}
   VegetationDensity: 0.11
-  WaterTile: {fileID: 11400000, guid: 4ab3706e0fd6a2e4eba22a7a2d91804c, type: 2}
+  WaterTile: {fileID: 11400000, guid: 0d826dab1ab72134e8a1dd54a196ff44, type: 2}
   NumberOfWaterFeatures: {x: 1, y: 3}

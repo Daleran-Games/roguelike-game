@@ -29,8 +29,8 @@ namespace UnityEngine.Tilemaps
                 T obj;
                 if (data.TryGetValue(coord, out obj))
                     return obj;
-
-                throw new KeyNotFoundException(coord + " not found in " + typeof(T).ToString() + " directory.");
+                else
+                    return default(T);
             }
 
             set

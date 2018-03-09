@@ -9,7 +9,7 @@ namespace DaleranGames.TileEngine
     public abstract class MapTemplate : ScriptableObject
     {
 
-        public abstract void GenerateMap(out DataGrid<TileBase> tiles, out DataGrid<GameObject> objects, Vector3Int origin);
+        public abstract void GenerateMap(out DataGrid<MapTile> tiles, out DataGrid<GameObject> objects, Vector3Int origin);
 
         public static void DrawLine<T>(T item, ref T[,] grid, Vector2Int start, Vector2Int end, int thickness, bool overwrite = false)
         {
@@ -26,7 +26,7 @@ namespace DaleranGames.TileEngine
 
         }
 
-        public static void LayoutObjectsAtRandom<T>(T item, ref DataGrid<T> grid, BoundsInt bounds, int z, float chance, bool overwrite = false)
+        public static void LayoutObjectsAtRandom<T>(T item, DataGrid<T> grid, BoundsInt bounds, int z, float chance, bool overwrite = false)
         {
             for (int y = bounds.yMin; y <= bounds.yMax; y++)
             {
@@ -38,7 +38,7 @@ namespace DaleranGames.TileEngine
             }
         }
 
-        public static void LayoutObjectsAtRandom<T>(T[] items, ref DataGrid<T> grid, BoundsInt bounds, int z, float chance, bool overwrite = false)
+        public static void LayoutObjectsAtRandom<T>(T[] items, DataGrid<T> grid, BoundsInt bounds, int z, float chance, bool overwrite = false)
         {
             for (int y = bounds.yMin; y <= bounds.yMax; y++)
             {
@@ -60,7 +60,7 @@ namespace DaleranGames.TileEngine
 
         }
 
-        public static void DrawRandomBorder<T>(T border, ref DataGrid<T> grid, Vector2Int borderThickness, int z, MapEdge edges, bool overwrite = false)
+        public static void DrawRandomBorder<T>(T border, DataGrid<T> grid, Vector2Int borderThickness, int z, MapEdge edges, bool overwrite = false)
         {
             if (edges.HasFlag(MapEdge.North))
             {

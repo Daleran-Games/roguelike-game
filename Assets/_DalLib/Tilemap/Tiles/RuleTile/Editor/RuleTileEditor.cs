@@ -349,5 +349,6 @@ namespace UnityEditor
 			t.LoadImage(System.Convert.FromBase64String(base64));
 			return t;
 		}
-	}
+
+    }
 }

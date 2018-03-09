@@ -36,4 +36,3 @@ MonoBehaviour:
   DetailChance: 0.156
   Sprites:
   - {fileID: 21300070, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
-  - {fileID: 21300060, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}

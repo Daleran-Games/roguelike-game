@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c2772b37c3f6c479151e44c922c56e, type: 3}
+  m_Name: Terrain_Water
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300058, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
+  albedo: {r: 0.4777249, g: 0.6911765, b: 0.67351156, a: 1}
+  prefab: {fileID: 0}
+  collision: 1
+  DetailChance: 0.05
+  Details:
+  - {fileID: 21300070, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}

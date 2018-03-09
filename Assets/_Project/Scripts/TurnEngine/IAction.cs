@@ -4,13 +4,8 @@ using UnityEngine;
 
 namespace DaleranGames.TurnEngine
 {
-    public class TurnObject : MonoBehaviour
+    public interface IAction
     {
 
-
-        public void Acted()
-        {
-
-        }
     }
 }

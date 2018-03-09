@@ -7,6 +7,7 @@ using UnityEditor;
 #endif
 
 using UnityEngine;
+using DaleranGames;
 
 namespace UnityEngine.Tilemaps
 {
@@ -102,6 +103,17 @@ namespace UnityEngine.Tilemaps
             tile.m_TileColliderType=(Tile.ColliderType) EditorGUILayout.EnumPopup("Collider Type", tile.m_TileColliderType);
             if (EditorGUI.EndChangeCheck())
                 EditorUtility.SetDirty(tile);
+        }
+
+        public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
+        {
+            AnimatedTile tile = AssetDatabase.LoadAssetAtPath<AnimatedTile>(assetPath);
+            if (tile.m_AnimatedSprites[0] != null)
+            {
+                return tile.m_AnimatedSprites[0].ToTexture2D(width, height);
+            }
+
+            return null;
         }
     }
 #endif
