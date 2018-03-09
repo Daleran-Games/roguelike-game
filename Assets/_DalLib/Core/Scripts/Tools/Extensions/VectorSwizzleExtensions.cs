@@ -1,5 +1,5 @@
 ﻿
-namespace UnityEngine
+namespace UnityEngine.Swizzles
 {
     public static class VectorSwizzleExtensions
     {
