@@ -9,16 +9,28 @@ namespace DaleranGames.TileEngine
     public abstract class MapTemplate : ScriptableObject
     {
 
-        public abstract void GenerateMap(out DataGrid<MapTile> tiles, out DataGrid<GameObject> objects, Vector3Int origin);
+        public abstract void GenerateMap(out DataGrid<TileBase> tiles, out DataGrid<GameObject> objects, Vector3Int origin);
 
         public static void DrawLine<T>(T item, ref T[,] grid, Vector2Int start, Vector2Int end, int thickness, bool overwrite = false)
         {
 
         }
 
-        public static void DrawBox<T>(T item, ref T[,] grid, Vector2Int bottomLeft, Vector2Int topRight, bool fill = false, bool overwrite = false)
+        public static void DrawBox<T>(T item, DataGrid<T> grid, BoundsInt bounds,int z, bool fill = false, bool overwrite = false)
         {
-
+            for (int y = bounds.yMin; y <= bounds.yMax; y++)
+            {
+                for (int x = bounds.xMin; x <= bounds.xMax; x++)
+                {
+                    if (fill)
+                        grid.Add(new Vector3Int(x, y, z), item, overwrite);
+                    else
+                    {
+                        if (x == bounds.xMin || x == bounds.xMax || y == bounds.yMin || y == bounds.yMax)
+                            grid.Add(new Vector3Int(x, y, z), item, overwrite);
+                    }
+                }
+            }
         }
 
         public static void DrawCircle<T>(T item, ref T[,] grid, Vector2Int radii, Vector2Int center, bool fill = false, bool overwrite = false)

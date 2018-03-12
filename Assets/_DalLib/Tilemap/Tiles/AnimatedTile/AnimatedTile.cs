@@ -107,7 +107,7 @@ namespace UnityEngine.Tilemaps
 
         public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
         {
-            AnimatedTile tile = AssetDatabase.LoadAssetAtPath<AnimatedTile>(assetPath);
+            //AnimatedTile tile = AssetDatabase.LoadAssetAtPath<AnimatedTile>(assetPath);
             if (tile.m_AnimatedSprites[0] != null)
             {
                 return tile.m_AnimatedSprites[0].ToTexture2D(width, height);

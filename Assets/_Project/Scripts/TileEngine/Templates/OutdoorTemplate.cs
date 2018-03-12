@@ -13,32 +13,32 @@ namespace DaleranGames.TileEngine
         public Vector2Int MapHeight = new Vector2Int(18, 22);
 
         [Header("Border Tiles")]
-        public MapTile NorthTile;
+        public TileBase NorthTile;
         public Vector2Int NorthSizeRange;
-        public MapTile SouthTile;
+        public TileBase SouthTile;
         public Vector2Int SouthSizeRange;
-        public MapTile EastTile;
+        public TileBase EastTile;
         public Vector2Int EastSizeRange;
-        public MapTile WestTile;
+        public TileBase WestTile;
         public Vector2Int WestSizeRange;
 
         [Header("Fill Tiles")]
-        public MapTile DirtTile;
+        public TileBase DirtTile;
         [Range(0f,1f)]
         public float DirtDensity = 0.5f;
-        public MapTile[] VegetationTiles;
+        public TileBase[] VegetationTiles;
         [Range(0f, 1f)]
         public float VegetationDensity = 0.5f;
 
         [Header("Water Tiles")]
-        public MapTile WaterTile;
+        public TileBase WaterTile;
         public Vector2Int NumberOfWaterFeatures;
 
-        public override void GenerateMap(out DataGrid<MapTile> tiles, out DataGrid<GameObject> objects, Vector3Int origin)
+        public override void GenerateMap(out DataGrid<TileBase> tiles, out DataGrid<GameObject> objects, Vector3Int origin)
         {
             Vector2Int mapSize = new Vector2Int(Random.Int(MapWidth), Random.Int(MapHeight));
             BoundsInt mapBounds = new BoundsInt(origin, new Vector3Int(mapSize.x, mapSize.y, 1));
-            tiles = new DataGrid<MapTile>(mapBounds);
+            tiles = new DataGrid<TileBase>(mapBounds);
             objects = new DataGrid<GameObject>(mapBounds);
 
             if (NorthTile != null)

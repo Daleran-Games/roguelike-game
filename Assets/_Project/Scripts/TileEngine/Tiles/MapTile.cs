@@ -22,9 +22,8 @@ namespace DaleranGames.TileEngine
         public GameObject Prefab { get { return prefab; } }
 
         [SerializeField]
-        [EnumFlags]
-        CollisionType collision;
-        public CollisionType Collision { get { return collision; } }
+        Tile.ColliderType colliderType;
+        public Tile.ColliderType ColliderType { get { return colliderType; } }
 
         [Header("Details")]
         [Range(0f, 1f)]
@@ -52,12 +51,12 @@ namespace DaleranGames.TileEngine
             tileData.color = albedo;
             tileData.transform = Matrix4x4.identity;
             tileData.flags = TileFlags.None;
+            tileData.colliderType = ColliderType;
             
         }
 
         public override bool StartUp(Vector3Int position, ITilemap tilemap, GameObject go)
         {
-            Map.Instance.Collision[position] = collision;
 
             if (go != null)
                 go.transform.position += new Vector3(0.5f, 0.5f, 0);

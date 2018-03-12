@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Tilemaps;
 using Object = UnityEngine.Object;
+using DaleranGames;
 
 namespace UnityEditor
 {
@@ -265,8 +266,8 @@ namespace UnityEditor
 			}
 			if (tilingRule.m_Output == RuleTile.TilingRule.OutputSprite.Random)
 			{
-				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Noise");
-				tilingRule.m_PerlinScale = EditorGUI.Slider(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_PerlinScale, 0.001f, 0.999f);
+				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Detail Chance");
+				tilingRule.m_DetailChance = EditorGUI.Slider(new Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_DetailChance, 0.0f, 1f);
 				y += k_SingleLineHeight;
 
 				GUI.Label(new Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), "Shuffle");
@@ -293,7 +294,14 @@ namespace UnityEditor
 
 		public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
 		{
-			if (tile.m_DefaultSprite != null)
+            if (tile.m_DefaultSprite != null)
+            {
+                return tile.m_DefaultSprite.ToTexture2D(width, height);
+            }
+            return null;
+
+            /*
+            if (tile.m_DefaultSprite != null)
 			{
 				Type t = GetType("UnityEditor.SpriteUtility");
 				if (t != null)
@@ -308,6 +316,7 @@ namespace UnityEditor
 				}
 			}
 			return base.RenderStaticPreview(assetPath, subAssets, width, height);
+            */
 		}
 
 		private static Type GetType(string TypeName)

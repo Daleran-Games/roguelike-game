@@ -26,10 +26,7 @@ namespace DaleranGames.TurnEngine
 
         public bool IsValidMovePosition(Vector3Int pos)
         {
-            if (Map.Instance.Collision[pos].HasFlag(CollisionType.Movement))
-                return false;
-            else
-                return true;
+            return false;
         }
 
     }

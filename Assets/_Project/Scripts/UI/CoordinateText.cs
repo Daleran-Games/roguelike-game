@@ -35,9 +35,6 @@ namespace DaleranGames.UI
             if (Map.Instance.Terrain.cellBounds.Contains(coord))
                 update += "Coord: " + coord.ToString() + System.Environment.NewLine;
 
-            if (Map.Instance.Collision.Bounds.Contains(coord))
-                update += "Collision: " + Map.Instance.Collision[coord].ToString();
-
 
             text.text = update;
         }

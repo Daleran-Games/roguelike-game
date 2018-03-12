@@ -17,7 +17,7 @@ namespace UnityEngine.Tilemaps
 			public Neighbor[] m_Neighbors;
 			public Sprite[] m_Sprites;
 			public float m_AnimationSpeed;
-			public float m_PerlinScale;
+			public float m_DetailChance;
 			public Transform m_RuleTransform;
 			public OutputSprite m_Output;
 			public Tile.ColliderType m_ColliderType;
@@ -29,7 +29,7 @@ namespace UnityEngine.Tilemaps
 				m_Neighbors = new Neighbor[8];
 				m_Sprites = new Sprite[1];
 				m_AnimationSpeed = 1f;
-				m_PerlinScale = 0.5f;
+				m_DetailChance = 0.5f;
 				m_ColliderType = Tile.ColliderType.Sprite;
 
 				for(int i=0; i<m_Neighbors.Length; i++)
@@ -62,10 +62,14 @@ namespace UnityEngine.Tilemaps
 								tileData.sprite = rule.m_Sprites[0];
 							break;
 							case TilingRule.OutputSprite.Random:
-								int index = Mathf.Clamp(Mathf.FloorToInt(GetPerlinValue(position, rule.m_PerlinScale, 100000f) * rule.m_Sprites.Length), 0, rule.m_Sprites.Length - 1);
-								tileData.sprite = rule.m_Sprites[index];
-								if (rule.m_RandomTransform != TilingRule.Transform.Fixed)
-									transform = ApplyRandomTransform(rule.m_RandomTransform, transform, rule.m_PerlinScale, position);
+
+                            if (Random.value <= rule.m_DetailChance)
+                                tileData.sprite = rule.m_Sprites[(int)(rule.m_Sprites.Length * Random.value)];
+                            else
+                                tileData.sprite = rule.m_Sprites[0];
+
+                            if (rule.m_RandomTransform != TilingRule.Transform.Fixed)
+                                transform = ApplyRandomTransform(rule.m_RandomTransform, transform, rule.m_DetailChance, position);
 							break;
 					}
 					tileData.transform = transform;
