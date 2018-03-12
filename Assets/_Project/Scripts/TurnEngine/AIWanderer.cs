@@ -24,7 +24,7 @@ namespace DaleranGames.TurnEngine
             Vector3Int move = Vector3Int.zero;
             bool skip = false;
 
-            PickNewDirection(out move, out skip);
+            PickRandomDirection(out move, out skip);
 
             if (!skip)
             {
@@ -38,7 +38,7 @@ namespace DaleranGames.TurnEngine
             yield break;
         }
 
-        void PickNewDirection(out Vector3Int move, out bool skip)
+        void PickRandomDirection(out Vector3Int move, out bool skip)
         {
             skip = false;
             move = Vector3Int.zero;
