@@ -9,6 +9,11 @@ namespace DaleranGames.TileEngine
 {
     public static class TilePhysics
     {
+
+        public static Vector3Int[] Cardinals = new Vector3Int[] { Vector3Int.right, Vector3Int.left, Vector3Int.up, Vector3Int.down };
+        public static Vector3Int[] Ordinals = new Vector3Int[] { new Vector3Int(1,1,0), new Vector3Int(-1,1,0), new Vector3Int(-1,-1,0), new Vector3Int(1,-1,0) };
+        public static Vector3Int[] Directions = new Vector3Int[] { new Vector3Int(1, 1, 0), new Vector3Int(-1, 1, 0), new Vector3Int(-1, -1, 0), new Vector3Int(1, -1, 0), Vector3Int.right, Vector3Int.left, Vector3Int.up, Vector3Int.down };
+
         public static int ManhattenDistance(this Vector3Int origin, Vector3Int point)
         {
             return Math.Abs(point.x - origin.x) + Math.Abs(point.y - origin.y);
@@ -54,6 +59,23 @@ namespace DaleranGames.TileEngine
                     return false;
             }
             return true;
+        }
+
+        public static List<Vector3Int> CircleCast(Vector3Int origin, int range, int layer=0)
+        {
+            List<Vector3Int> results = new List<Vector3Int>();
+
+            for (int y=-range; y <= range; y++)
+            {
+                for (int x = -range; x <= range; x++)
+                {
+                    Vector3Int tile = new Vector3Int(x, y, layer);
+                    if (ManhattenDistance(origin, tile) <= range)
+                        results.Add(tile);
+                }
+            }
+
+            return results;
         }
 
         

@@ -8,7 +8,7 @@ namespace DaleranGames.TurnEngine
     public abstract class Actor : MonoBehaviour, IActor
     {
         public Vector3Int Position;
-
+    
         protected virtual void OnEnable()
         {
             TurnManager.AddTurnObject(this, true);

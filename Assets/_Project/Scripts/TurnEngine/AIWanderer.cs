@@ -9,7 +9,6 @@ namespace DaleranGames.TurnEngine
     {
 
         MoveAction moveAction;
-
         Vector3Int[] directions = new Vector3Int[] { Vector3Int.right, Vector3Int.left, Vector3Int.up, Vector3Int.down };
 
         private void Awake()
@@ -21,6 +20,7 @@ namespace DaleranGames.TurnEngine
         {
             yield return new WaitWhile(() => DOTween.IsTweening(transform));
 
+
             Vector3Int move = Vector3Int.zero;
             bool skip = false;
 
@@ -30,7 +30,6 @@ namespace DaleranGames.TurnEngine
             {
                 Position += move;
                 moveAction.Move(Position);
-                
             }
             else
                 transform.DOMove(transform.position, TurnManager.TurnSpeed);
@@ -54,7 +53,6 @@ namespace DaleranGames.TurnEngine
                 }
             }
             skip = true;
-
         }
 
     }

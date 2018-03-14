@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace DaleranGames.TileEngine
 {
     [CreateAssetMenu(fileName = "NewMapTile", menuName = "Tiles and Brushes/Map Tile", order = 365)]
@@ -64,8 +68,31 @@ namespace DaleranGames.TileEngine
 
             return true;
         }
-
-
     }
+
+#if UNITY_EDITOR
+    [CustomEditor(typeof(MapTile))]
+    public class MapTileEditor : Editor
+    {
+        private MapTile tile { get { return (target as MapTile); } }
+
+        public override void OnInspectorGUI()
+        {
+
+            DrawDefaultInspector();
+        }
+        
+
+        public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
+        {
+            if (tile.Sprite != null)
+            {
+                return tile.Sprite.ToTexture2D(tile.Albedo,width, height);
+            }
+
+            return null;
+        }
+    }
+#endif
 }
 

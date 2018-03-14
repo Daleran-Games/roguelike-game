@@ -13,7 +13,7 @@ namespace DaleranGames.TileEngine
         CollisionType type;
 
 
-        DataGrid<CollisionType> col;
+        CollisionLayer col;
 
         MoveAction mover;
 
@@ -21,7 +21,7 @@ namespace DaleranGames.TileEngine
         void Start()
         {
             col = Map.Instance.Collision;
-            col.Add(Map.Instance.Terrain.WorldToCell(transform.position), type);
+            col[Map.Instance.Terrain.WorldToCell(transform.position)] = type;
         }
 
         private void OnEnable()

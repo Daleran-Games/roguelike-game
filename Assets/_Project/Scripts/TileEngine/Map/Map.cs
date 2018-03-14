@@ -13,7 +13,7 @@ namespace DaleranGames.TileEngine
         public MapTemplate Template;
 
         [Header("Map Layers")]
-        public DataGrid<CollisionType> Collision;
+        public CollisionLayer Collision;
         public Tilemap Terrain;
         
 
@@ -30,7 +30,7 @@ namespace DaleranGames.TileEngine
             DataGrid<GameObject> objects;
             DataGrid<MapTile> tiles;
             Template.GenerateMap(out tiles,out objects, Vector3Int.zero);
-            Collision = new DataGrid<CollisionType>(tiles.Bounds);
+            Collision = new CollisionLayer(tiles.Bounds);
             Terrain.SetTiles(tiles.Positions, tiles.Values);
         }
 

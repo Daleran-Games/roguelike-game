@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using System.Collections.ObjectModel;
 
-namespace UnityEngine.Tilemaps
+namespace DaleranGames
 {
     [System.Serializable]
     public class DataGrid<T>

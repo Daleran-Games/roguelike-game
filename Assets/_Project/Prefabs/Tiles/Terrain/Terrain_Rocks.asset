@@ -14,7 +14,7 @@ MonoBehaviour:
   sprite: {fileID: 21300022, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}
   albedo: {r: 0.44117647, g: 0.31911466, b: 0.24005191, a: 1}
   prefab: {fileID: 0}
-  collision: 7
+  collision: 5
   DetailChance: 0.5
   Details:
   - {fileID: 21300024, guid: 7458a5a4a79ef9045abeb7c2fe95e649, type: 3}

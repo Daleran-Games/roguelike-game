@@ -18,7 +18,6 @@ namespace DaleranGames.TurnEngine
 
         public void Move(Vector3Int to)
         {
-
             transform.DOMove(to, TurnManager.TurnSpeed);
             Moved?.Invoke(LastPosition,to);
             LastPosition = to;
